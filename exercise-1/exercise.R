@@ -44,9 +44,9 @@ worst.vehicle.id <- vehicles.2.wheel$id[vehicles.2.wheel$hwy == worst.vehicle]
 # You'll need to filter more!
 MostEfficientHighway <- function(year, make){
   vehicle.year.info <- vehicles[vehicles$year == year & vehicles$make == make, ]
-  View(vehicle.year.info)
   highest.hwy <- max(vehicle.year.info$hwy)
   best.car <- vehicle.year.info$model[vehicle.year.info$hwy == highest.hwy]
+  return(best.car)
 }
 
 # What was the most efficient honda model of 1995?
